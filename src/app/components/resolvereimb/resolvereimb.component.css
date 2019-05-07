@@ -1,0 +1,22 @@
+.request{
+    padding: 10px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.titlebox
+{
+    background-color: lightblue;
+}
+.resolveform
+{
+    padding: 10px;
+}
+#resolve
+{
+
+    margin: 10px 0;
+}
+#statusId
+{
+    width: 300px;
+}

@@ -1,0 +1,24 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" role="tab" routerLink="welcomescreen" aria-controls="home" aria-selected="true">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="create-tab" data-toggle="tab" role="tab" routerLink="createreimb" aria-controls="create-tab" aria-selected="false">Create Reimbursement Request</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="view-tab" data-toggle="tab" role="tab" routerLink="viewreimb" aria-controls="view-tab" aria-selected="false">View My Requests</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="resolve-tab" data-toggle="tab" role="tab" routerLink="resolvereimb" aria-controls="resolve-tab" aria-selected="false">Resolve Requests</a>
+      </li>
+    <li>
+        <input class="btn btn-primary" type="submit" value="Logout" id="logout" routerLink="../login">
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"></div>
+    <div class="tab-pane fade" id="create" role="tabpanel" aria-labelledby="create-tab"></div>
+    <div class="tab-pane fade" id="view" role="tabpanel" aria-labelledby="view-tab"></div>
+    <div class="tab-pane fade" id="resolve" role="tabpanel" aria-labelledby="resolve-tab"></div>
+    <router-outlet></router-outlet>
+  </div>

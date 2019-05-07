@@ -1,0 +1,19 @@
+<div *ngFor="let request of active" class = "request">
+    <div class="titlebox">Reimbursement Request Id: {{request.id}}</div>
+    <br>
+    Amount: {{request.amount}} $
+    <br>
+    Description: {{request.description}}
+    <br>
+    Type ID: {{request.typeId}}
+    <br>
+      <div class="resolveform">
+          <label for="reimbtype">Set Status: </label>
+          <select class="form-control" id="statusId" [(ngModel)]="statusId" name="statusId">   
+                  <option value ="2">Approve</option>
+                  <option value ="3">Deny</option>
+          </select>
+              <button type="submit" class="btn btn-primary" (click)="resolve(request.id, statusId)" id = "resolve">Resolve</button>
+      </div>  
+  </div>
+  <p  class = "titlebox" *ngIf = "isEmpty()">No Reimbursement Requests Found</p>
