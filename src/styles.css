@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url('https://media.giphy.com/media/Yy26NRbpB9lDi/giphy.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    background-attachment: scroll;
+}
+#root{
+    min-height: 500px;
+}

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { LogoutserviceService } from 'src/app/services/logoutservice.service';
+import { Router } from '@angular/router';
+import { routerNgProbeToken } from '@angular/router/src/router_module';
 
 @Component({
   selector: 'app-welcomecomponent',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomecomponentComponent implements OnInit {
 
-  constructor() { }
+  splitCache = sessionStorage.getItem('cache').split(' ');
+  roleId = Number(this.splitCache[1]);
+
+  constructor(private logoutService: LogoutserviceService, private router: Router) { }
 
   ngOnInit() {
   }
-
+  isRegular() {
+    return this.roleId === 2;
+  }
+  logout(){
+    this.logoutService.logalert();
+    this.router.navigate(['../login']);
+  }
 }

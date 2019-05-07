@@ -37,12 +37,10 @@ export class ResolvereimbComponent implements OnInit {
     }
   }
 
-  resolve(requestId, statusId)
-  {
-    console.log(requestId);
-    console.log(statusId);
-    // this.resolveService.resolveRequest(this.userId, requestId, statusId);
-    for ( let i = 0; i < this.resolveService.requests.length; i++){
+  resolve(requestId, statusId){
+    alert(`Request ID ${requestId} has been resolved`);
+    this.resolveService.resolveRequest(this.userId, requestId, statusId);
+    for ( let i = 0; i < this.resolveService.requests.length; i++) {
       if ( this.resolveService.requests[i].id === requestId) {
         this.resolveService.requests.splice(i, 1);
         break;
