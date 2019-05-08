@@ -51,7 +51,7 @@ export class ViewreimbComponent implements OnInit {
     };
     this.httpClient.post('http://localhost:8080/ERSApp/retrieve', payload, {
       observe: 'response'
-      }).pipe(map(response => response.body)
+      }).pipe(map(response => response.body as Array <ReimbRequest>)
       ).subscribe(response => {
         this.viewStatusSubject.next(200);
         response.forEach(element => {

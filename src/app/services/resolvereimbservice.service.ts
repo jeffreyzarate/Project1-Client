@@ -22,7 +22,7 @@ export class ResolvereimbserviceService {
     };
     this.httpClient.post('http://localhost:8080/ERSApp/resolve', payload, {
       observe: 'response'
-      }).pipe(map(response => response.body)
+      }).pipe(map(response => response.body as Array <ReimbRequest>)
       ).subscribe(response => {
         this.resolveStatusSubject.next(200);
         response.forEach(element => {
