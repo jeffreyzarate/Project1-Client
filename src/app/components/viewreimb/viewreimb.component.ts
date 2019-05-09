@@ -15,7 +15,7 @@ export class ViewreimbComponent implements OnInit {
   private viewStatusSubject = new Subject<number>();
   public  $viewStatus = this.viewStatusSubject.asObservable();
   requests = new Array <ReimbRequest>();
-  allrequests = new Array <ReimbRequest>() ;
+  allrequests = new Array <ReimbRequest>();
   pendingrequests = new Array <ReimbRequest>();
   approvedrequests = new Array <ReimbRequest>();
   deniedrequests = new Array <ReimbRequest>();

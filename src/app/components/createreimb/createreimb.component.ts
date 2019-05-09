@@ -26,6 +26,7 @@ export class CreatereimbComponent implements OnInit {
       if (status === 200) {
         alert('Request submitted');
       } else {
+        alert('Invalid request');
         this.lastStatus = status;
       }
     });

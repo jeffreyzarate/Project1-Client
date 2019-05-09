@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
       if (status === 200) {
         this.router.navigateByUrl('welcomecomponent');
       } else {
+        alert('Username or password is incorrect.');
         this.lastStatus = status;
       }
     });
