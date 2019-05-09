@@ -32,15 +32,13 @@ export class CreatereimbComponent implements OnInit {
     });
   }
 
-  ngOnDestroy()
-  {
+  ngOnDestroy() {
     if (this.response) {
       this.response.unsubscribe();
     }
   }
 
-  submit()
-  {
+  submit() {
     this.createService.createRequest(this.amount, this.typeId, this.description, this.receipt, this.authorId);
   }
 
