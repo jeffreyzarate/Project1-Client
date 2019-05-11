@@ -28,5 +28,9 @@
   Type ID: {{request.typeId}}
   <br>
   Status ID : {{request.statusId}}
+  <br>
+  Date Submitted: {{request.submitted | date : 'yyyy-MM-dd HH:mm'}}
+  <br>
+  Date Resolved: {{request.received | date : 'yyyy-MM-dd HH:mm'}}
 </div>
 <p  class = "titlebox" *ngIf= "isEmpty()">No Reimbursement Requests Found</p>

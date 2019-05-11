@@ -55,6 +55,7 @@ export class ViewreimbComponent implements OnInit {
       ).subscribe(response => {
         this.viewStatusSubject.next(200);
         response.forEach(element => {
+          console.log(element);
           this.requests.push(element);
         });
         this.allrequests = this.requests;

@@ -17,8 +17,8 @@ export class ReimbRequest {
             this.submitted = submitted;
             this.resolved = resolved;
             this.description = description;
-            this. receipt = receipt;
-            this. authorId = authorId;
+            this.receipt = receipt;
+            this.authorId = authorId;
             this.resolverId = resolverId;
             this.statusId = statusId;
             this.typeId = typeId;
